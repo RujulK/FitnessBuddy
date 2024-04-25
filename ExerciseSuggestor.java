@@ -5,10 +5,9 @@ import java.sql.SQLException;
 import java.util.Random;
 
 public class ExerciseSuggestor {
-    // Database connection parameters
     private static final String URL = "jdbc:mysql://localhost:3306/fb";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "N@ruto2580";
+    private static final String USERNAME = ""; // Enter your database username
+    private static final String PASSWORD = ""; // Enter your database password
 
     public static String suggestExercise(int choice) {
         try (Connection connection = DatabaseManager.getConnection()) {
@@ -31,7 +30,6 @@ public class ExerciseSuggestor {
 
 
 
-    // Helper method to determine BMI category
     private static String getBMICategory(double bmi) {
         if (bmi < 18.5) {
             return "Underweight";
